@@ -40,7 +40,7 @@ class LineChart extends Component {
           }
         },
         series: [{
-          name: 'tell',
+          name: '',
           data: data
         }] };
      }

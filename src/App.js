@@ -15,7 +15,7 @@ class App extends Component {
 
   componentDidMount() {
     const request = async () => {
-      const response = await fetch("/api/sec/2019/tell", {
+      const response = await fetch("/api/sec/2019/ba", {
         headers: {
           accepts: "application/json"
         }
