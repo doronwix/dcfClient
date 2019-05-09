@@ -24,9 +24,19 @@ class LineChart extends Component {
       if(Object.keys(nextProps).length !== 0 && nextProps.constructor === Object){
         const keys = Object.keys(nextProps)
         for (const key of keys) {
-          categories.push(nextProps[key].fiscalYear);
-          data.push(nextProps[key].revenues);
+         let iKeys = Object.keys(nextProps[key]);
+          for (const ikey of iKeys) {
+            if (ikey !== "fiscalYear"){
+              data.push(nextProps[key][ikey]);
+            }
+            else{
+              categories.push(nextProps[key][ikey]);
+            }
+            
+          }
+            
         }
+      
        /*  Object.Values(nextProps).forEach(elm => {
           categories.push(elm.fiscalYear);
           data.push(elm.revenues)
